@@ -1,0 +1,25 @@
+D:\School\Semester 5\Info5060 .Net\Project 1\Project1\Project1\StoichimetryLibrary\bin\Debug\net8.0\StoichimetryLibrary.deps.json
+D:\School\Semester 5\Info5060 .Net\Project 1\Project1\Project1\StoichimetryLibrary\bin\Debug\net8.0\StoichimetryLibrary.dll
+D:\School\Semester 5\Info5060 .Net\Project 1\Project1\Project1\StoichimetryLibrary\bin\Debug\net8.0\StoichimetryLibrary.pdb
+D:\School\Semester 5\Info5060 .Net\Project 1\Project1\Project1\StoichimetryLibrary\obj\Debug\net8.0\StoichimetryLibrary.GeneratedMSBuildEditorConfig.editorconfig
+D:\School\Semester 5\Info5060 .Net\Project 1\Project1\Project1\StoichimetryLibrary\obj\Debug\net8.0\StoichimetryLibrary.AssemblyInfoInputs.cache
+D:\School\Semester 5\Info5060 .Net\Project 1\Project1\Project1\StoichimetryLibrary\obj\Debug\net8.0\StoichimetryLibrary.AssemblyInfo.cs
+D:\School\Semester 5\Info5060 .Net\Project 1\Project1\Project1\StoichimetryLibrary\obj\Debug\net8.0\StoichimetryLibrary.csproj.CoreCompileInputs.cache
+D:\School\Semester 5\Info5060 .Net\Project 1\Project1\Project1\StoichimetryLibrary\obj\Debug\net8.0\StoichimetryLibrary.sourcelink.json
+D:\School\Semester 5\Info5060 .Net\Project 1\Project1\Project1\StoichimetryLibrary\obj\Debug\net8.0\StoichimetryLibrary.dll
+D:\School\Semester 5\Info5060 .Net\Project 1\Project1\Project1\StoichimetryLibrary\obj\Debug\net8.0\refint\StoichimetryLibrary.dll
+D:\School\Semester 5\Info5060 .Net\Project 1\Project1\Project1\StoichimetryLibrary\obj\Debug\net8.0\StoichimetryLibrary.pdb
+D:\School\Semester 5\Info5060 .Net\Project 1\Project1\Project1\StoichimetryLibrary\obj\Debug\net8.0\ref\StoichimetryLibrary.dll
+D:\School\Semester 5\Info5060 .Net\Project 1\Project1\Project1\StoichimetryLibrary\obj\Debug\net8.0\StoichimetryLibrary.csproj.AssemblyReference.cache
+D:\School\Semester 5\Info5060 .Net\temp\Project1\StoichimetryLibrary\bin\Debug\net8.0\StoichimetryLibrary.deps.json
+D:\School\Semester 5\Info5060 .Net\temp\Project1\StoichimetryLibrary\bin\Debug\net8.0\StoichimetryLibrary.dll
+D:\School\Semester 5\Info5060 .Net\temp\Project1\StoichimetryLibrary\bin\Debug\net8.0\StoichimetryLibrary.pdb
+D:\School\Semester 5\Info5060 .Net\temp\Project1\StoichimetryLibrary\obj\Debug\net8.0\StoichimetryLibrary.csproj.AssemblyReference.cache
+D:\School\Semester 5\Info5060 .Net\temp\Project1\StoichimetryLibrary\obj\Debug\net8.0\StoichimetryLibrary.GeneratedMSBuildEditorConfig.editorconfig
+D:\School\Semester 5\Info5060 .Net\temp\Project1\StoichimetryLibrary\obj\Debug\net8.0\StoichimetryLibrary.AssemblyInfoInputs.cache
+D:\School\Semester 5\Info5060 .Net\temp\Project1\StoichimetryLibrary\obj\Debug\net8.0\StoichimetryLibrary.AssemblyInfo.cs
+D:\School\Semester 5\Info5060 .Net\temp\Project1\StoichimetryLibrary\obj\Debug\net8.0\StoichimetryLibrary.csproj.CoreCompileInputs.cache
+D:\School\Semester 5\Info5060 .Net\temp\Project1\StoichimetryLibrary\obj\Debug\net8.0\StoichimetryLibrary.dll
+D:\School\Semester 5\Info5060 .Net\temp\Project1\StoichimetryLibrary\obj\Debug\net8.0\refint\StoichimetryLibrary.dll
+D:\School\Semester 5\Info5060 .Net\temp\Project1\StoichimetryLibrary\obj\Debug\net8.0\StoichimetryLibrary.pdb
+D:\School\Semester 5\Info5060 .Net\temp\Project1\StoichimetryLibrary\obj\Debug\net8.0\ref\StoichimetryLibrary.dll

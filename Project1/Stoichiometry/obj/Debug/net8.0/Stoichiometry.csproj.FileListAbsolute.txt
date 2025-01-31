@@ -1,0 +1,39 @@
+D:\School\Semester 5\Info5060 .Net\Project 1\Project1\Project1\Stoichiometry\bin\Debug\net8.0\Stoichiometry.exe
+D:\School\Semester 5\Info5060 .Net\Project 1\Project1\Project1\Stoichiometry\bin\Debug\net8.0\Stoichiometry.deps.json
+D:\School\Semester 5\Info5060 .Net\Project 1\Project1\Project1\Stoichiometry\bin\Debug\net8.0\Stoichiometry.runtimeconfig.json
+D:\School\Semester 5\Info5060 .Net\Project 1\Project1\Project1\Stoichiometry\bin\Debug\net8.0\Stoichiometry.dll
+D:\School\Semester 5\Info5060 .Net\Project 1\Project1\Project1\Stoichiometry\bin\Debug\net8.0\Stoichiometry.pdb
+D:\School\Semester 5\Info5060 .Net\Project 1\Project1\Project1\Stoichiometry\bin\Debug\net8.0\StoichimetryLibrary.dll
+D:\School\Semester 5\Info5060 .Net\Project 1\Project1\Project1\Stoichiometry\bin\Debug\net8.0\StoichimetryLibrary.pdb
+D:\School\Semester 5\Info5060 .Net\Project 1\Project1\Project1\Stoichiometry\obj\Debug\net8.0\Stoichiometry.csproj.AssemblyReference.cache
+D:\School\Semester 5\Info5060 .Net\Project 1\Project1\Project1\Stoichiometry\obj\Debug\net8.0\Stoichiometry.GeneratedMSBuildEditorConfig.editorconfig
+D:\School\Semester 5\Info5060 .Net\Project 1\Project1\Project1\Stoichiometry\obj\Debug\net8.0\Stoichiometry.AssemblyInfoInputs.cache
+D:\School\Semester 5\Info5060 .Net\Project 1\Project1\Project1\Stoichiometry\obj\Debug\net8.0\Stoichiometry.AssemblyInfo.cs
+D:\School\Semester 5\Info5060 .Net\Project 1\Project1\Project1\Stoichiometry\obj\Debug\net8.0\Stoichiometry.csproj.CoreCompileInputs.cache
+D:\School\Semester 5\Info5060 .Net\Project 1\Project1\Project1\Stoichiometry\obj\Debug\net8.0\Stoichiometry.sourcelink.json
+D:\School\Semester 5\Info5060 .Net\Project 1\Project1\Project1\Stoichiometry\obj\Debug\net8.0\Stoichio.09CB1B3A.Up2Date
+D:\School\Semester 5\Info5060 .Net\Project 1\Project1\Project1\Stoichiometry\obj\Debug\net8.0\Stoichiometry.dll
+D:\School\Semester 5\Info5060 .Net\Project 1\Project1\Project1\Stoichiometry\obj\Debug\net8.0\refint\Stoichiometry.dll
+D:\School\Semester 5\Info5060 .Net\Project 1\Project1\Project1\Stoichiometry\obj\Debug\net8.0\Stoichiometry.pdb
+D:\School\Semester 5\Info5060 .Net\Project 1\Project1\Project1\Stoichiometry\obj\Debug\net8.0\Stoichiometry.genruntimeconfig.cache
+D:\School\Semester 5\Info5060 .Net\Project 1\Project1\Project1\Stoichiometry\obj\Debug\net8.0\ref\Stoichiometry.dll
+D:\School\Semester 5\Info5060 .Net\Project 1\Project1\Project1\Stoichiometry\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\School\Semester 5\Info5060 .Net\temp\Project1\Stoichiometry\bin\Debug\net8.0\Stoichiometry.exe
+D:\School\Semester 5\Info5060 .Net\temp\Project1\Stoichiometry\bin\Debug\net8.0\Stoichiometry.deps.json
+D:\School\Semester 5\Info5060 .Net\temp\Project1\Stoichiometry\bin\Debug\net8.0\Stoichiometry.runtimeconfig.json
+D:\School\Semester 5\Info5060 .Net\temp\Project1\Stoichiometry\bin\Debug\net8.0\Stoichiometry.dll
+D:\School\Semester 5\Info5060 .Net\temp\Project1\Stoichiometry\bin\Debug\net8.0\Stoichiometry.pdb
+D:\School\Semester 5\Info5060 .Net\temp\Project1\Stoichiometry\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\School\Semester 5\Info5060 .Net\temp\Project1\Stoichiometry\bin\Debug\net8.0\StoichimetryLibrary.dll
+D:\School\Semester 5\Info5060 .Net\temp\Project1\Stoichiometry\bin\Debug\net8.0\StoichimetryLibrary.pdb
+D:\School\Semester 5\Info5060 .Net\temp\Project1\Stoichiometry\obj\Debug\net8.0\Stoichiometry.csproj.AssemblyReference.cache
+D:\School\Semester 5\Info5060 .Net\temp\Project1\Stoichiometry\obj\Debug\net8.0\Stoichiometry.GeneratedMSBuildEditorConfig.editorconfig
+D:\School\Semester 5\Info5060 .Net\temp\Project1\Stoichiometry\obj\Debug\net8.0\Stoichiometry.AssemblyInfoInputs.cache
+D:\School\Semester 5\Info5060 .Net\temp\Project1\Stoichiometry\obj\Debug\net8.0\Stoichiometry.AssemblyInfo.cs
+D:\School\Semester 5\Info5060 .Net\temp\Project1\Stoichiometry\obj\Debug\net8.0\Stoichiometry.csproj.CoreCompileInputs.cache
+D:\School\Semester 5\Info5060 .Net\temp\Project1\Stoichiometry\obj\Debug\net8.0\Stoichio.09CB1B3A.Up2Date
+D:\School\Semester 5\Info5060 .Net\temp\Project1\Stoichiometry\obj\Debug\net8.0\Stoichiometry.dll
+D:\School\Semester 5\Info5060 .Net\temp\Project1\Stoichiometry\obj\Debug\net8.0\refint\Stoichiometry.dll
+D:\School\Semester 5\Info5060 .Net\temp\Project1\Stoichiometry\obj\Debug\net8.0\Stoichiometry.pdb
+D:\School\Semester 5\Info5060 .Net\temp\Project1\Stoichiometry\obj\Debug\net8.0\Stoichiometry.genruntimeconfig.cache
+D:\School\Semester 5\Info5060 .Net\temp\Project1\Stoichiometry\obj\Debug\net8.0\ref\Stoichiometry.dll
