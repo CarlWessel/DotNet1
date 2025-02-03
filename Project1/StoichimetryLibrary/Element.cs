@@ -6,23 +6,25 @@ using System.Threading.Tasks;
 
 namespace StoichimetryLibrary
 {
-    internal class Element : IElement
+    internal class Element : IMolecularElement
     {
-        public string Symbol { get; }
-        public string Name { get; }
-        public ushort AtomicNumber { get; }
-        public double AtomicMass { get; }
-        public ushort Period { get; }
-        public ushort Group { get; }
+        public string Symbol { get; set; }
+        public string Name { get; set; }
+        public ushort AtomicNumber { get; set; }
+        public double AtomicMass { get; set; }
+        public ushort Period { get; set; }
+        public ushort Group { get; set; }
 
-        public Element(string symbol, string name, ushort atomicNumber, double atomicMass, ushort period, ushort group)
-        {
-            Symbol = symbol;
-            Name = name;
-            AtomicNumber = atomicNumber;
-            AtomicMass = atomicMass;
-            Period = period;
-            Group = group;
-        }
+        public ushort Multiplier { get; set; }
+
+        //public Element(string symbol, string name, ushort atomicNumber, double atomicMass, ushort period, ushort group)
+        //{
+        //    Symbol = symbol;
+        //    Name = name;
+        //    AtomicNumber = atomicNumber;
+        //    AtomicMass = atomicMass;
+        //    Period = period;
+        //    Group = group;
+        //}
     }
 }

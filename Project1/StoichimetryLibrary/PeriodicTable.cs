@@ -1,41 +1,35 @@
-﻿using Newtonsoft.Json;
-using System.Text.Json;
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using Newtonsoft.Json;
+using StoichimetryLibrary;
 
-namespace StoichimetryLibrary
+namespace StoichiometryLibrary
 {
-    public class PeriodicTable
+    public static class PeriodicTable
     {
-        private const string _ELEMENTS_FILE = "PeriodicTableJSON.json";
-        private readonly List<IElement> _elements;
+        private static readonly List<IElement> _elements;
 
-        public PeriodicTable()
+        static PeriodicTable()
         {
-            // Read PeriodicTable.JSON file
-            var jsonString = File.ReadAllText(_ELEMENTS_FILE);
+            var json = File.ReadAllText("PeriodicTableJSON.json");
+            var data = JsonConvert.DeserializeObject<Dictionary<string, dynamic>>(json);
 
-            // Deserialize into a temporary dynamic object to access the "elements" array
-            // IMPORTANT!!! this is from chatgpt, I need help doing this in a proper way
-            var jsonObject = JsonConvert.DeserializeObject<dynamic>(jsonString);
-
-            // Map JSON objects to the private Element class
-            _elements = ((IEnumerable<dynamic>)jsonObject.elements)
-                .Select(e => new Element(
-                    (string)e.symbol,
-                    (string)e.name,
-                    (ushort)e.number,
-                    (double)e.atomic_mass,
-                    (ushort)e.period,
-                    (ushort)e.group
-                )).Cast<IElement>().ToList();
-        }
-
-        public void Print()
-        {
-            foreach (var element in _elements)
+            _elements = new List<IElement>();
+            foreach (var item in data["elements"])
             {
-                Console.WriteLine($"{element.Name}");
+                _elements.Add(new Element
+                {
+                    Symbol = item["symbol"],
+                    Name = item["name"],
+                    AtomicNumber = item["number"],
+                    AtomicMass = item["atomic_mass"],
+                    Period = item["period"],
+                    Group = item["group"]
+                });
             }
         }
 
+        public static IElement[] Elements => _elements.ToArray();
     }
 }
