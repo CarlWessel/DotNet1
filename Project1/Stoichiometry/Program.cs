@@ -8,36 +8,37 @@ namespace Stoichiometry
         static void Main(string[] args)
         {
 
-            /* DisplayHelp();
-             string userInput = Console.ReadLine();
+            /*DisplayHelp();
+            string userInput = Console.ReadLine();
 
-             if (string.IsNullOrEmpty(userInput))
-             {
-                 Console.WriteLine("Error: No input provided.");
-                 DisplayHelp();
-                 return;
-             }
-             if (userInput == "/?")
-             {
-                 DisplayHelp();
-             }
-             else if (userInput == "/t")
-             {
-                 DisplayPeriodicTable();
-             }
-             //else if (userInput.StartsWith("/f:"))
-             //{
-             //    string filePath = userInput[0][3..];
-             //    ProcessFileInput(filePath);
-             //}
-             else
-             {
-                 ProcessFormulas(userInput.Split(' ', StringSplitOptions.RemoveEmptyEntries));
-             }*/
+            if (string.IsNullOrEmpty(userInput))
+            {
+                Console.WriteLine("Error: No input provided.");
+                DisplayHelp();
+                return;
+            }
+            if (userInput == "/?")
+            {
+                DisplayHelp();
+            }
+            else if (userInput == "/t")
+            {
+                DisplayPeriodicTable();
+            }
+            else if (userInput.StartsWith("/f:"))
+            {
+                string filePath = userInput;
+                ProcessFileInput(filePath);
+            }
+            else
+            {
+                ProcessFormulas(userInput.Split(' ', StringSplitOptions.RemoveEmptyEntries));
+            }*/
+
             Console.WriteLine();
             if (args.Length <=0 || args == null)
             {
-                Console.WriteLine("Error: No input provided." + args.Length);
+                Console.WriteLine("Error: No input provided.");
                 DisplayHelp();
             }
             else if (args[0] == "/?")
@@ -82,7 +83,7 @@ namespace Stoichiometry
 
         private static void ProcessFileInput(string filePath)
         {
-            Console.WriteLine(filePath);
+            filePath = filePath.Remove(0, 3);
 
             if (!File.Exists(filePath))
             {
