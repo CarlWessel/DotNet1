@@ -8,37 +8,55 @@ namespace Stoichiometry
     {
         static void Main(string[] args)
         {
-            bool done = false;
 
-            while (!done)
+            /* DisplayHelp();
+             string userInput = Console.ReadLine();
+
+             if (string.IsNullOrEmpty(userInput))
+             {
+                 Console.WriteLine("Error: No input provided.");
+                 DisplayHelp();
+                 return;
+             }
+             if (userInput == "/?")
+             {
+                 DisplayHelp();
+             }
+             else if (userInput == "/t")
+             {
+                 DisplayPeriodicTable();
+             }
+             //else if (userInput.StartsWith("/f:"))
+             //{
+             //    string filePath = userInput[0][3..];
+             //    ProcessFileInput(filePath);
+             //}
+             else
+             {
+                 ProcessFormulas(userInput.Split(' ', StringSplitOptions.RemoveEmptyEntries));
+             }*/
+            Console.WriteLine();
+            if (args.Length <=0 || args == null)
             {
-
+                Console.WriteLine("Error: No input provided." + args.Length);
                 DisplayHelp();
-                string userInput = Console.ReadLine();
-
-                if (string.IsNullOrEmpty(userInput))
-                {
-                    Console.WriteLine("Error: No input provided.");
-                    DisplayHelp();
-                    return;
-                }
-                if (userInput == "/?")
-                {
-                    DisplayHelp();
-                }
-                else if (userInput == "/t")
-                {
-                    DisplayPeriodicTable();
-                }
-                //else if (userInput.StartsWith("/f:"))
-                //{
-                //    string filePath = userInput[0][3..];
-                //    ProcessFileInput(filePath);
-                //}
-                else
-                {
-                    ProcessFormulas(userInput.Split(' ', StringSplitOptions.RemoveEmptyEntries));
-                }
+            }
+            else if (args[0] == "/?")
+            {
+                DisplayHelp();
+            }
+            else if (args[0] == "/t")
+            {
+                DisplayPeriodicTable();
+            }
+            else if (args[0].StartsWith("/f:"))
+            {
+                string filePath = args[0];
+                ProcessFileInput(filePath);
+            }
+            else
+            {
+                ProcessFormulas(args);
             }
         }
 
@@ -63,17 +81,19 @@ namespace Stoichiometry
             }
         }
 
-        //private static void ProcessFileInput(string filePath)
-        //{
-        //    if (!File.Exists(filePath))
-        //    {
-        //        Console.WriteLine($"Error: File '{filePath}' not found.");
-        //        return;
-        //    }
+        private static void ProcessFileInput(string filePath)
+        {
+            Console.WriteLine(filePath);
 
-        //    string[] formulas = File.ReadAllLines(filePath);
-        //    ProcessFormulas(formulas);
-        //}
+            if (!File.Exists(filePath))
+            {
+                Console.WriteLine($"Error: File '{filePath}' not found.");
+                return;
+            }
+
+            string[] formulas = File.ReadAllLines(filePath);
+            ProcessFormulas(formulas);
+        }
 
         private static void ProcessFormulas(string[] formulas)
         {
@@ -83,6 +103,7 @@ namespace Stoichiometry
                 if (!molecule.Valid)
                 {
                     Console.WriteLine($"{formula} is NOT valid");
+                    Console.WriteLine();
                     continue;
                 }
 
@@ -96,6 +117,7 @@ namespace Stoichiometry
                         Console.WriteLine($"{element.Symbol} ({periodicElement.Name}) {periodicElement.AtomicMass} x {element.Multiplier} = {periodicElement.AtomicMass * element.Multiplier:F6}");
                     }
                 }
+                Console.WriteLine();
             }
         }
     }
