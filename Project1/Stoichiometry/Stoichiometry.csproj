@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\StoichimetryLibrary\StoichimetryLibrary.csproj" />
+    <ProjectReference Include="..\StoichimetryLibrary\StoichiometryLibrary.csproj" />
   </ItemGroup>
 
 </Project>

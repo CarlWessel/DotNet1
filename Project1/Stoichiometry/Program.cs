@@ -1,5 +1,4 @@
-﻿using StoichimetryLibrary;
-using StoichiometryLibrary;
+﻿using StoichiometryLibrary;
 using System.Runtime.CompilerServices;
 
 namespace Stoichiometry

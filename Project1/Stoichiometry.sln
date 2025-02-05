@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35527.113 d17.12
+VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stoichiometry", "Stoichiometry\Stoichiometry.csproj", "{C7083FF3-70A4-4638-B6EE-46597F883C7D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoichimetryLibrary", "StoichimetryLibrary\StoichimetryLibrary.csproj", "{E691BC19-3BB7-46AA-AEF2-811EF7A40FC6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoichiometryLibrary", "StoichimetryLibrary\StoichiometryLibrary.csproj", "{E691BC19-3BB7-46AA-AEF2-811EF7A40FC6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
