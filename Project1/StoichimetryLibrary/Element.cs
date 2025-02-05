@@ -17,14 +17,15 @@ namespace StoichimetryLibrary
 
         public ushort Multiplier { get; set; }
 
-        //public Element(string symbol, string name, ushort atomicNumber, double atomicMass, ushort period, ushort group)
-        //{
-        //    Symbol = symbol;
-        //    Name = name;
-        //    AtomicNumber = atomicNumber;
-        //    AtomicMass = atomicMass;
-        //    Period = period;
-        //    Group = group;
-        //}
+        public Element(string symbol, string name, ushort atomicNumber, double atomicMass, ushort period, ushort group, ushort multiplier = 1)
+        {
+            Symbol = symbol;
+            Name = name;
+            AtomicNumber = atomicNumber;
+            AtomicMass = atomicMass;
+            Period = period;
+            Group = group;
+            Multiplier = multiplier;
+        }
     }
 }
