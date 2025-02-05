@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StoichiometryLibrary;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -33,7 +34,11 @@ namespace StoichimetryLibrary
             double totalMass = 0.0;
             foreach (var element in GetComposition())
             {
-                totalMass += element.AtomicMass * element.Multiplier;
+                var periodicElement = PeriodicTable.Elements.FirstOrDefault(e => e.Symbol == element.Symbol);
+                if (periodicElement != null)
+                {
+                    totalMass += periodicElement.AtomicMass * element.Multiplier;
+                }
             }
             return totalMass;
         }
