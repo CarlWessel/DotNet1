@@ -18,15 +18,14 @@ namespace StoichiometryLibrary
             _elements = new List<IElement>();
             foreach (var item in data["elements"])
             {
-                _elements.Add(new Element
-                {
-                    Symbol = item["symbol"],
-                    Name = item["name"],
-                    AtomicNumber = item["number"],
-                    AtomicMass = item["atomic_mass"],
-                    Period = item["period"],
-                    Group = item["group"]
-                });
+                _elements.Add(new Element(
+                    symbol: (string)item["symbol"],
+                    name: (string)item["name"],
+                    atomicNumber: Convert.ToUInt16(item["number"]),
+                    atomicMass: Convert.ToDouble(item["atomic_mass"]),
+                    period: Convert.ToUInt16(item["period"]),
+                    group: Convert.ToUInt16(item["group"])
+                ));
             }
         }
 
