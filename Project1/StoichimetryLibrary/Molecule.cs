@@ -50,7 +50,9 @@ namespace StoichimetryLibrary
             foreach (Match match in matches)
             {
                 string symbol = match.Groups[1].Value; // element symbol (e.g., H, O, Na)
-                ushort multiplier = match.Groups[2].Success ? ushort.Parse(match.Groups[2].Value) : (ushort)1;
+                ushort multiplier = (match.Groups[2].Success && ushort.TryParse(match.Groups[2].Value, out ushort parsedValue))
+                    ? parsedValue
+                    : (ushort)1;
 
                 if (!string.IsNullOrEmpty(symbol))
                 {

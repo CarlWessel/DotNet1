@@ -22,8 +22,6 @@ namespace Stoichiometry
                     DisplayHelp();
                     return;
                 }
-
-
                 if (userInput == "/?")
                 {
                     DisplayHelp();
@@ -32,10 +30,14 @@ namespace Stoichiometry
                 {
                     DisplayPeriodicTable();
                 }
+                //else if (userInput.StartsWith("/f:"))
+                //{
+                //    string filePath = userInput[0][3..];
+                //    ProcessFileInput(filePath);
+                //}
                 else
                 {
-                    Console.WriteLine("Error, command unknown");
-                    DisplayHelp();
+                    ProcessFormulas(userInput.Split(' ', StringSplitOptions.RemoveEmptyEntries));
                 }
             }
         }
@@ -58,6 +60,42 @@ namespace Stoichiometry
             foreach (var element in elements)
             {
                 Console.WriteLine($"{element.AtomicNumber,13} | {element.Symbol,6} | {element.Name,-14} | {element.AtomicMass,11:F4} | {element.Period,6} | {element.Group,5}");
+            }
+        }
+
+        //private static void ProcessFileInput(string filePath)
+        //{
+        //    if (!File.Exists(filePath))
+        //    {
+        //        Console.WriteLine($"Error: File '{filePath}' not found.");
+        //        return;
+        //    }
+
+        //    string[] formulas = File.ReadAllLines(filePath);
+        //    ProcessFormulas(formulas);
+        //}
+
+        private static void ProcessFormulas(string[] formulas)
+        {
+            foreach (var formula in formulas)
+            {
+                Molecule molecule = new(formula);
+                if (!molecule.Valid)
+                {
+                    Console.WriteLine($"{formula} is NOT valid");
+                    continue;
+                }
+
+                double mass = molecule.CalcMass();
+                Console.WriteLine($"{formula} has a mass of {mass:F6}\n");
+                foreach (var element in molecule.GetComposition())
+                {
+                    var periodicElement = PeriodicTable.Elements.FirstOrDefault(e => e.Symbol == element.Symbol);
+                    if (periodicElement != null)
+                    {
+                        Console.WriteLine($"{element.Symbol} ({periodicElement.Name}) {periodicElement.AtomicMass} x {element.Multiplier} = {periodicElement.AtomicMass * element.Multiplier:F6}");
+                    }
+                }
             }
         }
     }
