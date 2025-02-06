@@ -7,34 +7,6 @@ namespace Stoichiometry
     {
         static void Main(string[] args)
         {
-
-            /*DisplayHelp();
-            string userInput = Console.ReadLine();
-
-            if (string.IsNullOrEmpty(userInput))
-            {
-                Console.WriteLine("Error: No input provided.");
-                DisplayHelp();
-                return;
-            }
-            if (userInput == "/?")
-            {
-                DisplayHelp();
-            }
-            else if (userInput == "/t")
-            {
-                DisplayPeriodicTable();
-            }
-            else if (userInput.StartsWith("/f:"))
-            {
-                string filePath = userInput;
-                ProcessFileInput(filePath);
-            }
-            else
-            {
-                ProcessFormulas(userInput.Split(' ', StringSplitOptions.RemoveEmptyEntries));
-            }*/
-
             Console.WriteLine();
             if (args.Length <=0 || args == null)
             {
@@ -60,6 +32,7 @@ namespace Stoichiometry
             }
         }
 
+        //Displays help info
         private static void DisplayHelp()
         {
             Console.WriteLine("Stoichiometry Carl, Trish, and Cody");
@@ -70,6 +43,7 @@ namespace Stoichiometry
             Console.WriteLine("filepath            Specifies a text file containing molecular formulas, one per line");
         }
 
+        //Displays the periodic table
         private static void DisplayPeriodicTable()
         {
             var elements = PeriodicTable.Elements;
@@ -81,6 +55,7 @@ namespace Stoichiometry
             }
         }
 
+        //Proccesses file and formulas and outputs results
         private static void ProcessFileInput(string filePath)
         {
             filePath = filePath.Remove(0, 3);
@@ -95,6 +70,7 @@ namespace Stoichiometry
             ProcessFormulas(formulas);
         }
 
+        //Processes formula and calculates it
         private static void ProcessFormulas(string[] formulas)
         {
             foreach (var formula in formulas)
@@ -102,13 +78,13 @@ namespace Stoichiometry
                 Molecule molecule = new(formula);
                 if (!molecule.Valid)
                 {
-                    Console.WriteLine($"{formula} is NOT valid");
-                    Console.WriteLine();
+                    Console.WriteLine($"{formula} is NOT valid\n");
                     continue;
                 }
 
                 double mass = molecule.CalcMass();
                 Console.WriteLine($"{formula} has a mass of {mass:F6}\n");
+
                 foreach (var element in molecule.GetComposition())
                 {
                     var periodicElement = PeriodicTable.Elements.FirstOrDefault(e => e.Symbol == element.Symbol);
@@ -120,5 +96,6 @@ namespace Stoichiometry
                 Console.WriteLine();
             }
         }
+
     }
 }

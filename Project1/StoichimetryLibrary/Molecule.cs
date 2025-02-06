@@ -16,7 +16,26 @@ namespace StoichiometryLibrary
         public string Formula { get; set; }
 
         // Read-only to indicate if formula is valid
-        public bool Valid => !string.IsNullOrEmpty(Formula) && FormulaRegex.IsMatch(Formula);
+        public bool Valid
+        {
+            get
+            {
+                ////Not a formula
+                if (string.IsNullOrEmpty(Formula) || !FormulaRegex.IsMatch(Formula))
+                    return false;
+                try
+                {
+                    //valid formula
+                    GetComposition();
+                    return true;
+                }
+                catch (InvalidOperationException)
+                {
+                    //Not valid formula
+                    return false;
+                }
+            }
+        }
 
         // Default constructor; initializes to empty string
         public Molecule() => Formula = string.Empty;
@@ -45,21 +64,21 @@ namespace StoichiometryLibrary
         // Method to get composition of the molecule as an array of IMolecularElement
         public IMolecularElement[] GetComposition()
         {
-            if (!Valid)
-                throw new InvalidOperationException("Invalid chemical formula.");
-
-            var elementCounts = new Dictionary<string, ushort>(); // Dictionary to count occurrences of each element
+            var elementCounts = new Dictionary<string, ushort>();
             var matches = Regex.Matches(Formula, @"([A-Z][a-z]*)(\d*)|\(([^()]+)\)(\d*)");
 
             foreach (Match match in matches)
             {
-                string symbol = match.Groups[1].Value; // element symbol (e.g., H, O, Na)
+                string symbol = match.Groups[1].Value;
                 ushort multiplier = (match.Groups[2].Success && ushort.TryParse(match.Groups[2].Value, out ushort parsedValue))
                     ? parsedValue
                     : (ushort)1;
 
                 if (!string.IsNullOrEmpty(symbol))
                 {
+                    if (!PeriodicTable.Elements.Any(e => e.Symbol == symbol))
+                        throw new InvalidOperationException($"Invalid element found: {symbol}");
+
                     if (elementCounts.ContainsKey(symbol))
                         elementCounts[symbol] += multiplier;
                     else
@@ -67,9 +86,10 @@ namespace StoichiometryLibrary
                 }
                 else
                 {
-                    string subFormula = match.Groups[3].Value; // sub-formula inside parentheses
+                    string subFormula = match.Groups[3].Value;
                     ushort groupMultiplier = match.Groups[4].Success ? ushort.Parse(match.Groups[4].Value) : (ushort)1;
                     var subMolecule = new Molecule(subFormula);
+
                     foreach (var element in subMolecule.GetComposition())
                     {
                         if (elementCounts.ContainsKey(element.Symbol))
@@ -80,8 +100,9 @@ namespace StoichiometryLibrary
                 }
             }
 
-            // Convert the dictionary to an array of IMolecularElement instances and return it
-            return elementCounts.Select(pair => new Element(pair.Key, pair.Key, 0, 0.0, 0, 0, pair.Value)).ToArray();
+            return elementCounts.Select(pair =>
+                new Element(pair.Key, pair.Key, 0, 0.0, 0, 0, pair.Value)
+            ).ToArray();
         }
 
     }

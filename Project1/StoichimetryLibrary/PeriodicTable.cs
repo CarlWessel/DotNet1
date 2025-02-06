@@ -7,10 +7,12 @@ namespace StoichiometryLibrary
 {
     public static class PeriodicTable
     {
+        //List of elements
         private static readonly List<IElement> _elements;
 
         static PeriodicTable()
         {
+            //Read json file and store it
             var json = File.ReadAllText("PeriodicTableJSON.json");
             var data = JsonConvert.DeserializeObject<Dictionary<string, dynamic>>(json);
 
