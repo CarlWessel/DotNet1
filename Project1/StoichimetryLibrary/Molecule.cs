@@ -20,7 +20,6 @@ namespace StoichiometryLibrary
         {
             get
             {
-                ////Not a formula
                 if (string.IsNullOrEmpty(Formula) || !FormulaRegex.IsMatch(Formula))
                     return false;
                 try

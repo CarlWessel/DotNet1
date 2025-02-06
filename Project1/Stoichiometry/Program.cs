@@ -73,24 +73,25 @@ namespace Stoichiometry
         //Processes formula and calculates it
         private static void ProcessFormulas(string[] formulas)
         {
+            Console.WriteLine("Stoichiometry Carl, Trish, and Cody\n");
             foreach (var formula in formulas)
             {
                 Molecule molecule = new(formula);
                 if (!molecule.Valid)
                 {
-                    Console.WriteLine($"{formula} is NOT valid\n");
+                    Console.WriteLine($"  {formula} is NOT valid\n");
                     continue;
                 }
 
                 double mass = molecule.CalcMass();
-                Console.WriteLine($"{formula} has a mass of {mass:F6}\n");
+                Console.WriteLine($"  {formula} has a mass of {mass:F6}\n");
 
                 foreach (var element in molecule.GetComposition())
                 {
                     var periodicElement = PeriodicTable.Elements.FirstOrDefault(e => e.Symbol == element.Symbol);
                     if (periodicElement != null)
                     {
-                        Console.WriteLine($"{element.Symbol} ({periodicElement.Name}) {periodicElement.AtomicMass} x {element.Multiplier} = {periodicElement.AtomicMass * element.Multiplier:F6}");
+                        Console.WriteLine($"\t{element.Symbol} ({periodicElement.Name}) {periodicElement.AtomicMass} x {element.Multiplier} = {periodicElement.AtomicMass * element.Multiplier:F6}");
                     }
                 }
                 Console.WriteLine();
