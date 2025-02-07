@@ -35,7 +35,7 @@ namespace Stoichiometry
         //Displays help info
         private static void DisplayHelp()
         {
-            Console.WriteLine("Stoichiometry Carl, Trish, and Cody");
+            Console.WriteLine("Stoichiometry Carl Wessel, Trishia Salamangkit, and Cody Sykes");
             Console.WriteLine("Usage:");
             Console.WriteLine("/?                  Display help");
             Console.WriteLine("/t                  Display periodic table");
@@ -73,7 +73,7 @@ namespace Stoichiometry
         //Processes formula and calculates it
         private static void ProcessFormulas(string[] formulas)
         {
-            Console.WriteLine("Stoichiometry Carl, Trish, and Cody\n");
+            Console.WriteLine("Stoichiometry Carl Wessel, Trishia Salamangkit, and Cody Sykes\n");
             foreach (var formula in formulas)
             {
                 Molecule molecule = new(formula);
