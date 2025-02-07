@@ -47,11 +47,11 @@ namespace Stoichiometry
         private static void DisplayPeriodicTable()
         {
             var elements = PeriodicTable.Elements;
-            Console.WriteLine("Atomic Number | Symbol | Name           | Atomic Mass | Period | Group");
-            Console.WriteLine("----------------------------------------------------------------------");
+            Console.WriteLine("Atomic Number | Symbol | Name           |  Atomic Mass  | Period | Group");
+            Console.WriteLine("------------------------------------------------------------------------");
             foreach (var element in elements)
             {
-                Console.WriteLine($"{element.AtomicNumber,13} | {element.Symbol,6} | {element.Name,-14} | {element.AtomicMass,11:F4} | {element.Period,6} | {element.Group,5}");
+                Console.WriteLine($"{element.AtomicNumber,13} | {element.Symbol,6} | {element.Name,-14} | {element.AtomicMass,14} | {element.Period,6} | {element.Group,5}");
             }
         }
 
