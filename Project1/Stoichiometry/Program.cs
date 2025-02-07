@@ -91,7 +91,7 @@ namespace Stoichiometry
                     var periodicElement = PeriodicTable.Elements.FirstOrDefault(e => e.Symbol == element.Symbol);
                     if (periodicElement != null)
                     {
-                        Console.WriteLine($"\t{element.Symbol} ({periodicElement.Name}) {periodicElement.AtomicMass} x {element.Multiplier} = {periodicElement.AtomicMass * element.Multiplier:F6}");
+                        Console.WriteLine($"\t{element.Symbol} ({periodicElement.Name}) {periodicElement.AtomicMass} x {element.Multiplier} = {(periodicElement.AtomicMass * element.Multiplier).ToString("0.######")}");
                     }
                 }
                 Console.WriteLine();
